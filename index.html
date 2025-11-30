@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jurassic Systems AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'jurassic-dark': '#0f172a',
+              'jurassic-green': '#1e293b',
+              'jurassic-amber': '#fbbf24',
+              'jurassic-amber-glow': '#d97706',
+              'jurassic-red': '#ef4444',
+            },
+            fontFamily: {
+              'display': ['"Bangers"', 'cursive'],
+              'tech': ['"Share Tech Mono"', 'monospace'],
+              'mono': ['"Roboto Mono"', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent global scroll */
+        background-color: #000;
+        color: #e2e8f0;
+      }
+      #root {
+        height: 100%;
+        width: 100%;
+      }
+      .scanline {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.2) 50%,
+          rgba(0,0,0,0.2)
+        );
+        background-size: 100% 4px;
+        position: fixed;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        opacity: 0.15;
+      }
+      .glow-text {
+        text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+      }
+      /* Custom scrollbar for that industrial feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d97706; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #fbbf24; 
+      }
+
+      /* Video specific scanlines */
+      .video-scanlines {
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.15) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="scanline"></div>
+  </body>
+</html>

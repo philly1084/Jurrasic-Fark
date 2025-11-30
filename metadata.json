@@ -1,0 +1,7 @@
+{
+  "name": "Jurassic Systems AI",
+  "description": "A splashy, movie-themed dinosaur dashboard allowing users to chat with a park ranger AI and generate dinosaur visualizations using Nano Banana.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
